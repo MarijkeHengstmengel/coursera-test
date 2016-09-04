@@ -1,0 +1,62 @@
+* {
+	box-sizing: border-box;
+}
+
+/* Simple responsive Framework */
+.row {
+	width: 100%;
+    paddding: 10px;
+}
+
+.title, #title1, #title2, #title3 {  
+	border: 1px solid black;
+    text-align: right; 
+    float: right;
+    position: relative;
+    margin: 0;
+    padding: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight:  bold;
+    font-size: 125%; 
+}
+#title1 {
+  background-color: yellow;
+}
+
+#title2 {
+  background-color: green;
+}
+
+#title3 {
+  background-color: red;
+  color: white;
+}
+/* desktop device */
+@media (min-width: 992px){
+	.col-lg-4 { float:left; width: 33.33%;}
+}
+/* tablet device */
+@media (min-width: 768px) and (max-width: 991px)
+{
+	.col-md-6, .col-md-12 { float: left; }
+	.col-md-6 {width: 50%; }
+	.col-md-12 {width: 100%;}
+}
+/* Mobile device */
+@media  (max-width: 767px)
+{
+  	.col-sl {width: 100%; }
+}
+
+.col {
+	background-color: gray;
+	border: 1px black solid;
+ 	margin: 10px;
+	margin-top: 10px;
+}
+.content {
+	margin: 8px;
+	margin-top: 45px;
+	
+}

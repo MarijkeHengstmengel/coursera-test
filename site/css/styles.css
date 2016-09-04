@@ -1,0 +1,41 @@
+* {
+	box-sizing: border-box;
+}
+
+h1 {
+	margin-bottom: 15px;
+}
+#h1 {
+	position: relative;
+	top: 0;
+	left: 0;
+
+}
+
+p {
+}
+
+
+/* Simple responsive Framework */
+.row {
+	width: 100%;
+	background-color: blue;
+}
+
+/* desktop device */
+@media (min-width: 992px){
+ .col-lg-4 { float:left; width: 33.33%; }
+}
+/* tablet device */
+@media (min-width: 768px) and (max-width: 991px)
+{
+	.col-md-6, .col-md-12 { float: left; }
+   .col-md-6 {width: 50%; }
+   .col-md-12 {width: 100%;}
+}
+/* Mobile device */
+@media  (max-width: 767px)
+{
+  .col-sl {width: 100%;}
+}
+
