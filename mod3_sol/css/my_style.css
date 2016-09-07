@@ -1,0 +1,67 @@
+/*#collapsable-nav {
+	background-color: green;
+	border: 1px solid black;
+	margin: auto;
+}	
+*/	
+
+
+
+#header-nav {
+	background-color: green;
+	border-radius: 0;
+	border: 1px solid black;
+/*	margin: 0;*/ 
+}
+
+.navbar-brand  h1 {
+	padding: auto;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #222;
+	margin-top: 0;
+	text-decoration: none;
+	color: black;
+}
+
+#nav-list {
+	margin-top: 0;
+	padding:0;
+	color: white;
+	text-align: center;
+	font-size: 1.8em;
+	background-color: blue;
+    margin-bottom: 0;	
+}
+
+.nav-list-item {
+	border: 1px solid black;	
+}
+
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar{
+ 	color: grey;
+	border: 1px solid black;
+}
+
+
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover, 
+.navbar-default .navbar-toggle:active, 
+.navbar-default .navbar-toggle:hover  .icon-bar,
+.navbar-default .navbar-toggle:focus  .icon-bar,
+.navbar-default .navbar-toggle:active .icon-bar {	
+	background-color: green;
+	border-color: white;
+	color: white;
+}
+
+
+.section-title {text-align: center; font-size: 1.5em;  font-style: bold; background-color: gray;}
+.section-text {text-align: left; 
+	           font-size: .8em; 
+	           background-color: gray;
+	           padding: 15px; 
+	           margin-bottom: 25px;}
+	           
