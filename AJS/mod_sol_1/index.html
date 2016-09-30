@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="utf-8">
+  <script src="angular.min.js"></script>
+  <script src="app.js"></script>
+  <title>Lunch checker</title>
+</head>
+<body ng-app="LunchCheck">
+  <h1> Lunch checker </h1>
+<div ng-controller="LunchCheckController">
+  <!-- I do NOT consider an empty item, i.e., , , as an item towards to the count -->
+  <input type="text" ng-model="name" ng-style="{'border': border}"><br><br>
+  <button ng-click="countLunch()">Check if too much</button><br><br>
+  <p ng-style="{'color': color}">{{message}}</p>
+</div>
+</body>
+</html>
