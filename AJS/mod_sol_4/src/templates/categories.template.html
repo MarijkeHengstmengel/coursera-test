@@ -1,0 +1,11 @@
+<a ui-sref="home">Home</a>
+<br><br><br>
+Select a category for more details:
+
+<ul>
+  <li ng-repeat="item in categories.items.data"
+      ui-sref="items({itemId: item.short_name})"
+      class='click_list'>
+     {{ item.name }}
+  </li>
+</ul>
