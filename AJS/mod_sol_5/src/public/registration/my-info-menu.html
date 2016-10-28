@@ -1,0 +1,15 @@
+<div class="row">
+  <section class="col-sm-6">
+<H1> My Favorite Menu </H1>
+<h3 class="menu-item-title">{{$ctrl.menu.name}}</h3>{{$ctrl.menu.short_name}}<br>
+
+<div class="menu-item-price">{{$ctrl.menu.price_small | currency}}<span> {{$ctrl.menu.small_portion_name}}</span> {{$ctrl.menu.price_large | currency}} <span>{{$ctrl.menu.large_portion_name}}</span></div>
+</section>
+<section class="col-sm-6">
+<img id="fav-menu" class="img-responsive" width="250" height="150" ng-src="{{$ctrl.basePath}}/images/{{$ctrl.menu.short_name}}.jpg" alt="{{$ctrl.menu.name}}">
+<div class="menu-item-description">
+<p class="menu-item-details">{{$ctrl.menu.description}}</p>
+</div>
+
+</section>
+</row>

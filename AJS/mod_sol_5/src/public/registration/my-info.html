@@ -1,0 +1,24 @@
+<!-- <div  class="text-center"> -->
+<div class="container">
+  <div class="row">
+    <section class="col-sm-4">
+
+<H1> My Info </H1>
+<!-- <div ng-controller="MyInfoController as myInfo"> -->
+<div ng-if="myInfo.user.lastname">
+Name: {{myInfo.user.firstname}} {{myInfo.user.lastname}}<br>
+Email: {{myInfo.user.email}}<br>
+Phone: {{myInfo.user.phonenumber}}<br>
+Menu number: {{myInfo.user.menu}}
+{{myInfo.menu.name}}
+</div>
+</section>
+<section class="col-sm-8">
+<div ng-if="myInfo.user.lastname">
+<my-info menu="myInfo.menu"></<my-info>
+</div>
+<div ng-hide="myInfo.user.lastname"><h2>Not signed up yet.</h2><h2><a ui-sref="public.sign-up" href="#/sign-up">Sign up now</a></h2> </div>
+</section>
+
+</div>
+</div>

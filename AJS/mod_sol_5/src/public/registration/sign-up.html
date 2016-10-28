@@ -1,0 +1,47 @@
+<div  class="text-center">
+<H1> Sign up for our newsletter!</H1>
+<div ng-controller="SignUpController as signUp">
+  <fieldset>
+    <form name='signUpForm' novalidate>
+      <input type="text" name="firstname" ng-model="signUp.user.firstname" placeholder="First name" required
+              minlength="1" ng-maxlength="10" class="signinput"><br>
+<span ng-if="(signUpForm.firstname.$error.minlength || signUpForm.firstname.$error.required) &&  signUpForm.firstname.$touched">
+Firstname must be at least 1 character long</span>
+              <br><br>
+      <input type="text" name="lastname" ng-model="signUp.user.lastname" placeholder="Last name" required  class="signinput"   minlength="2"><br>
+      <!-- <span ng-if="signUpForm.lastname.$error.minlength">
+      Lastname must be at least 2 character long</span> -->
+      <span ng-if="signUpForm.lastname.$touched &&  (signUpForm.lastname.$error.minlength || signUpForm.lastname.$error.required) ">
+      Lastname must be at least 2 character long</span>
+      <br><br>
+      <input type="email" name="email" ng-model="signUp.user.email" placeholder="email"  class="signinput" required><br>
+      <span ng-if="signUpForm.email.$invalid &&  signUpForm.email.$touched">
+      Must be a valid email adres: handle@domain format</span><br><br>
+      <input type="text" name="phonenumber" ng-model="signUp.user.phonenumber" placeholder="Phone ###-###-####"
+              pattern="(\d{3})-(\d{3})-(\d{4})"
+               class="signinput"><br>
+      <span ng-if="signUpForm.phonenumber.$invalid &&  signUpForm.phonenumber.$touched">
+       Must be a valid phone number with format ###-###-####</span><br><br>
+
+       <div>Number of favorite menu item (eg. A1 or L2)</div>
+       <input type="text" name="shortName" ng-model="signUp.user.menu" placeholder="Menu number" required class="signinput">
+       <span ng-if="signUpForm.shortName.$invalid &&  signUpForm.shortName.$touched"><br>
+       Must be a valid menu number</span>
+       <div ng-show="signUp.started">
+         <div ng-show="signUp.completed()===false">
+         {{signUp.message()}}
+         </div>
+       </div>
+       <br><br>
+      <button
+              ng-disabled="signUpForm.$invalid"
+              ng-click="signUp.submit()"
+             class="sign-btn"> Submit</button>
+    </form>
+  </fieldset>
+  <div ng-if="signUp.completed()">
+  {{signUp.message()}}
+</div>
+
+</div>
+</div>
